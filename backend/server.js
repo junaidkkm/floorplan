@@ -11,6 +11,11 @@ connectDB();
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("✅ Floorplan Backend is Running Successfully!");
+});
+
 app.use("/uploads", express.static("uploads"));
 
 // 📌 Upload the floor plan image
